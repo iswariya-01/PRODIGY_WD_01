@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ProDigy Infotech</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: transparent;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+nav.scrolled {
+  background: black;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px;
+}
+
+nav a:hover {
+  background: cyan;
+  color: black;
+}
+
+/* Sections */
+section {
+  height: 100vh;
+  padding-top: 80px;
+  text-align: center;
+}
+
+#home { background: blue; color: white; }
+#about { background: lightgray; }
+#contact { background: gray; }
+
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <h1>ProDigy Infotech</h1>
+  <p>Responsive Landing Page - Task 01</p>
+</section>
+
+<section id="about">
+  <h1>About</h1>
+</section>
+
+<section id="contact">
+  <h1>Contact</h1>
+</section>
+
+<script>
+window.addEventListener("scroll", function() {
+  var navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+
+</body>
+</html>
