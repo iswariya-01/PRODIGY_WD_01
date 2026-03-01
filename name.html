@@ -1,87 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>ProDigy Infotech</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProDigy Infotech</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
 }
 
 /* Navbar */
-nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: transparent;
-  padding: 15px;
-  text-align: center;
-  transition: 0.3s;
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:#000;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
 }
 
-nav.scrolled {
-  background: black;
+nav h2{
+    color:#00e5ff;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  padding: 8px;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
 }
 
-nav a:hover {
-  background: cyan;
-  color: black;
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
 }
 
 /* Sections */
-section {
-  height: 100vh;
-  padding-top: 80px;
-  text-align: center;
+section{
+    padding:25px;   /* 🔥 25px as you asked */
+    text-align:center;
 }
 
-#home { background: blue; color: white; }
-#about { background: lightgray; }
-#contact { background: gray; }
+/* Hero Section */
+.hero{
+    background:url('https://images.unsplash.com/photo-1518770660439-4636190af475') no-repeat center center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:120px; /* adjust for fixed navbar */
+    padding-bottom:25px;
+}
 
+.hero h1{
+    font-size:48px;
+    color:#00e5ff;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+.btn{
+    padding:15px 40px;
+    border-radius:50px;
+    border:none;
+    background:linear-gradient(to right,#00e5ff,#0072ff);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* About */
+#about{
+    background:#07121f;
+}
+
+#about h2{
+    color:#00e5ff;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+/* Services */
+#services{
+    background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center center/cover;
+}
+
+#services h2{
+    color:#00e5ff;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.service-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:250px;
+}
+
+/* Contact */
+#contact{
+    background:#07121f;
+}
+
+#contact h2{
+    color:#00e5ff;
+    margin-bottom:10px;
+}
 </style>
 </head>
 
 <body>
 
-<nav id="navbar">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+<nav>
+    <h2>ProDigy Infotech</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<section id="home">
-  <h1>ProDigy Infotech</h1>
-  <p>Responsive Landing Page - Task 01</p>
+<!-- Hero -->
+<section class="hero" id="home">
+    <h1>Responsive Landing Page</h1>
+    <p>Task-01 | ProDigy Infotech Internship</p>
+    <button class="btn">Explore More</button>
 </section>
 
+<!-- About -->
 <section id="about">
-  <h1>About</h1>
+    <h2>About Us</h2>
+    <p>We provide next-generation IT solutions powered by innovation, AI and modern development technologies.</p>
 </section>
 
+<!-- Services -->
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="card">Web Development</div>
+        <div class="card">Cloud Solutions</div>
+        <div class="card">Cybersecurity</div>
+    </div>
+</section>
+
+<!-- Contact -->
 <section id="contact">
-  <h1>Contact</h1>
+    <h2>Contact Us</h2>
+    <p>Email: info@prodigyinfotech.com</p>
 </section>
-
-<script>
-window.addEventListener("scroll", function() {
-  var navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-</script>
 
 </body>
 </html>
